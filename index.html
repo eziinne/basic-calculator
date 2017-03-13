@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Basic_Calculator</title>
+    <link rel="stylesheet" href="button%20calc.css" >
+<script>
+    function cal(val)
+{
+document.getElementById("display").value=val;
+}
+function calc(val)
+{
+    console.log( val )
+document.getElementById("display").value+=val;
+}
+function _eval()
+{ 
+try 
+{
+    console.log( document.getElementById("display").value )
+  cal(eval(document.getElementById("display").value)) 
+} 
+catch(err) 
+{
+    console.log(err);
+  cal('Error') 
+} 
+}  
+</script>
+</head>
+
+<body>
+<div class="block">
+ <p class="title"><strong>BASIC CALCULATOR </strong></p>
+ <form id="form1" name="form1" action="" onsubmit="return false;">
+   <div class="screen"><input type="text" readonly id="display" size="20"> </div>
+   <p>
+     <input type="submit" id="btn" value="+"  onclick='calc("+")'/>
+     <input type="submit" id="btn" value="-" onclick='calc("-")' />
+     <input type="submit" id="btn" value="*" onclick='calc("*")' />
+     <input type="submit" id="btn" value="/" onclick='calc("/")'/>
+   </p>
+   <p>
+     <input type="submit" id="btn" value="1" onclick='calc("1")' />
+     <input type="submit" id="btn" value="2" onclick='calc("2")' />
+     <input type="submit" id="btn" value="3" onclick='calc("3")' />
+     <input type="submit" id="btn" value="C" onclick='cal(" ")' /> 
+   </p>
+   <p>
+     <input type="submit" id="btn" value="4" onclick='calc("4")' />
+     <input type="submit" id="btn" value="5" onclick='calc("5")' />
+     <input type="submit" id="btn" value="6" onclick='calc("6")' />
+     <input type="submit" id="btn" value="=" onclick="_eval()" />
+   </p>
+   <p>
+     <input type="submit" id="btn" value="7" onclick='calc("7")' />
+     <input type="submit" id="btn" value="8" onclick='calc("8")' />
+     <input type="submit" id="btn" value="9" onclick='calc("9")' />
+     <input type="submit" id="btn" value="0" onclick='calc("0")' />
+   </p>
+ </form>
+ </div>
+</body>
+</html>
